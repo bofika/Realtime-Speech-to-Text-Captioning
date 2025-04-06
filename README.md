@@ -1,63 +1,99 @@
-# Realtime Speech-to-Text Captioning v1.0
+# Real-time Caption Display
 
-This application provides real-time, word-by-word speech-to-text captioning directly in the browser using the Web Speech API.
+A web-based real-time captioning application that provides live speech-to-text transcription with customizable display options.
 
-## ✨ Features
+## Features
 
-- ✅ Live word-by-word transcription with immediate display
-- ✅ Interim and final result handling
-- ✅ Customizable display settings:
-  - Font family, size, and color
-  - Background color
-  - Line spacing (1.0x – 6.0x)
+- Real-time speech-to-text captioning with word-by-word display
+- Multiple language support
+- Customizable caption display:
+  - Font size and family
+  - Text and background colors
+  - Background opacity
+  - Caption positioning (top, middle, bottom)
   - Text alignment (left, center, right)
-  - Caption position (top, middle, bottom)
-  - Max number of visible lines
-- ✅ Audio input device selection
-- ✅ Save full transcript to `.txt`
-- ✅ Works in Chrome and Edge browsers
+  - Number of visible lines (1-12)
+  - Line spacing control
+  - Top and bottom padding adjustment
+  - ALL CAPS display option
+- Auto-hiding control buttons
+- Save full transcript as text file
+- Keyboard accessible
+- Screen reader friendly
+- Debug mode for visual testing
 
-## 🚀 Getting Started
+## System Requirements
 
-### Prerequisites
+### Recommended Browsers
+- Google Chrome (preferred)
+- Microsoft Edge
+- Other Chromium-based browsers
 
-- [Node.js](https://nodejs.org/) installed (v16 or later recommended)
-- Modern browser: **Google Chrome** or **Microsoft Edge**
-- Internet connection (for Web Speech API)
-- Microphone access
+### Operating Systems
+- Windows
+- macOS
+- Linux
+- Chrome OS
 
-### Installation
+## Setup
 
-1. Extract the project ZIP file
-2. Open a terminal in the project directory
-3. Run the following commands:
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-```bash
-npm install
-npm run dev
-```
+## Usage
 
-Open the provided localhost link in your browser (e.g. http://localhost:5173)
+1. Configure caption settings:
+   - Choose your language
+   - Select audio input device
+   - Set display preferences:
+     - Position (top, middle, bottom)
+     - Text alignment
+     - Font and colors
+     - Number of caption lines
+     - Line spacing
+     - Padding
+   - Toggle ALL CAPS if desired
 
-📝 Usage
-Configure your desired caption settings
+2. Click "Start Captioning"
+3. Allow microphone access when prompted
+4. Begin speaking to see real-time captions
+5. Move your mouse to reveal control buttons:
+   - Save button (green) to download the full transcript
+   - Close button (red) to stop captioning and return to settings
+6. Control buttons automatically hide after 2 seconds of mouse inactivity
 
-Click Start Captioning
+## Accessibility Features
 
-Speak — captions will appear in real time
+- Keyboard navigation support
+- ARIA live regions for screen readers
+- High contrast color options
+- Customizable font sizes
+- Adjustable text alignment
+- Clear, semantic HTML structure
+- Auto-hiding controls for cleaner display
 
-Use Save Transcript to export the full spoken content
+## Known Limitations
 
-📁 Transcript
-The saved transcript file includes all final recognized text, preserving the full spoken content from your session.
+- Speech recognition requires an internet connection
+- Best performance in Chrome-based browsers
+- Language support varies by browser
+- Recognition accuracy depends on:
+  - Microphone quality
+  - Background noise
+  - Speaker clarity
+  - Chosen language
 
-📌 Notes
-Captions appear immediately as speech is recognized
+## Credits
 
-Interim results are replaced by final results when available
-
-The visible caption area strictly respects the configured line count
-
-Text alignment, spacing, and position are applied in real-time
-
-Developed with ❤️ using the Web Speech API.
+This application uses:
+- Web Speech API for speech recognition
+- React for the user interface
+- Tailwind CSS for styling
+- Lucide React for icons
